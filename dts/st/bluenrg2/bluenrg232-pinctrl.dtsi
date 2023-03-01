@@ -1,0 +1,14 @@
+#include <zephyr/dt-bindings/pinctrl/stm32-pinctrl.h>
+
+/ {
+	soc {
+		pinctrl: pin-controller@48000000 {
+
+			/* ADC_IN / ADC_INN / ADC_INP */
+
+			/omit-if-no-ref/ adc_in0_pa0: adc_in0_pa0 {
+				pinmux = <STM32_PINMUX('A', 0, ANALOG)>;
+			};
+		};
+	};
+};
