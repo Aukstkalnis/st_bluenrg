@@ -1,14 +1,292 @@
-#include <zephyr/dt-bindings/pinctrl/stm32-pinctrl.h>
+#include <zephyr/dt-bindings/pinctrl/st_bluenrg2-pinctrl.h>
 
 / {
 	soc {
-		pinctrl: pin-controller@48000000 {
+		pinctrl: pin-controller@40000000 {
 
-			/* ADC_IN / ADC_INN / ADC_INP */
-
-			/omit-if-no-ref/ adc_in0_pa0: adc_in0_pa0 {
-				pinmux = <STM32_PINMUX('A', 0, ANALOG)>;
+			/omit-if-no-ref/ uart_cts_io0: uart_cts_io0 {
+				pinmux = <ST_BLUENRG2_PINMUX(0, ST_BLUENRG2_MODE_SERIAL1)>;
 			};
+
+			/omit-if-no-ref/ spi_clk_io0: spi_clk_io0 {
+				pinmux = <ST_BLUENRG2_PINMUX(0, ST_BLUENRG2_MODE_SERIAL0)>;
+			};
+
+			/omit-if-no-ref/ cpuclk_io0: cpuclk_io0 {
+				pinmux = <ST_BLUENRG2_PINMUX(0, ST_BLUENRG2_MODE_SERIAL2)>;
+			};
+
+
+			/omit-if-no-ref/ uart_rts_io1: uart_rts_io1 {
+				pinmux = <ST_BLUENRG2_PINMUX(1, ST_BLUENRG2_MODE_SERIAL1)>;
+			};
+
+			/omit-if-no-ref/ spi_cs1_io1: spi_cs1_io1 {
+				pinmux = <ST_BLUENRG2_PINMUX(1, ST_BLUENRG2_MODE_SERIAL0)>;
+			};
+
+			/omit-if-no-ref/ pdm_data_io1: pdm_data_io1 {
+				pinmux = <ST_BLUENRG2_PINMUX(1, ST_BLUENRG2_MODE_SERIAL2)>;
+			};
+
+
+			/omit-if-no-ref/ pwm0_io2: pwm0_io2 {
+				pinmux = <ST_BLUENRG2_PINMUX(2, ST_BLUENRG2_MODE_SERIAL1)>;
+			};
+
+			/omit-if-no-ref/ spi_out_io2: spi_out_io2 {
+				pinmux = <ST_BLUENRG2_PINMUX(2, ST_BLUENRG2_MODE_SERIAL0)>;
+			};
+
+			/omit-if-no-ref/ pdm_clk_io2: pdm_clk_io2 {
+				pinmux = <ST_BLUENRG2_PINMUX(2, ST_BLUENRG2_MODE_SERIAL2)>;
+			};
+
+			/omit-if-no-ref/ pwm1_io3: pwm1_io3 {
+				pinmux = <ST_BLUENRG2_PINMUX(3, ST_BLUENRG2_MODE_SERIAL1)>;
+			};
+
+			/omit-if-no-ref/ spi_in_io3: spi_in_io3 {
+				pinmux = <ST_BLUENRG2_PINMUX(3, ST_BLUENRG2_MODE_SERIAL0)>;
+			};
+
+
+			/omit-if-no-ref/ uart_rxd_io4: uart_rxd_io4 {
+				pinmux = <ST_BLUENRG2_PINMUX(4, ST_BLUENRG2_MODE_SERIAL1)>;
+			};
+
+			/omit-if-no-ref/ i2c2_clk_io4: i2c2_clk_io4 {
+				pinmux = <ST_BLUENRG2_PINMUX(4, ST_BLUENRG2_MODE_SERIAL0)>;
+			};
+
+			/omit-if-no-ref/ pwm0_io4: pwm0_io4 {
+				pinmux = <ST_BLUENRG2_PINMUX(4, ST_BLUENRG2_MODE_SERIAL2)>;
+			};
+
+			/omit-if-no-ref/ uart_txd_io5: uart_txd_io5 {
+				pinmux = <ST_BLUENRG2_PINMUX(5, ST_BLUENRG2_MODE_SERIAL1)>;
+			};
+
+			/omit-if-no-ref/ i2c2_dat_io5: i2c2_dat_io5 {
+				pinmux = <ST_BLUENRG2_PINMUX(5, ST_BLUENRG2_MODE_SERIAL0)>;
+			};
+
+			/omit-if-no-ref/ pwm1_io5: pwm1_io5 {
+				pinmux = <ST_BLUENRG2_PINMUX(5, ST_BLUENRG2_MODE_SERIAL2)>;
+			};
+
+			
+			/omit-if-no-ref/ uart_rts_io6: uart_rts_io6 {
+				pinmux = <ST_BLUENRG2_PINMUX(6, ST_BLUENRG2_MODE_SERIAL1)>;
+			};
+
+			/omit-if-no-ref/ i2c2_clk_io6: i2c2_clk_io6 {
+				pinmux = <ST_BLUENRG2_PINMUX(6, ST_BLUENRG2_MODE_SERIAL0)>;
+			};
+
+			/omit-if-no-ref/ pdm_data_io6: pdm_data_io6 {
+				pinmux = <ST_BLUENRG2_PINMUX(6, ST_BLUENRG2_MODE_SERIAL2)>;
+			};
+
+			
+			/omit-if-no-ref/ uart_cts_io7: uart_cts_io7 {
+				pinmux = <ST_BLUENRG2_PINMUX(7, ST_BLUENRG2_MODE_SERIAL1)>;
+			};
+
+			/omit-if-no-ref/ i2c2_dat_io7: i2c2_dat_io7 {
+				pinmux = <ST_BLUENRG2_PINMUX(7, ST_BLUENRG2_MODE_SERIAL0)>;
+			};
+
+			/omit-if-no-ref/ pdm_clk_io7: pdm_clk_io7 {
+				pinmux = <ST_BLUENRG2_PINMUX(7, ST_BLUENRG2_MODE_SERIAL2)>;
+			};
+
+			
+			/omit-if-no-ref/ uart_txd_io8: uart_txd_io8 {
+				pinmux = <ST_BLUENRG2_PINMUX(8, ST_BLUENRG2_MODE_SERIAL1)>;
+			};
+
+			/omit-if-no-ref/ spi_clk_io8: spi_clk_io8 {
+				pinmux = <ST_BLUENRG2_PINMUX(8, ST_BLUENRG2_MODE_SERIAL0)>;
+			};
+
+			/omit-if-no-ref/ pdm_data_io8: pdm_data_io8 {
+				pinmux = <ST_BLUENRG2_PINMUX(8, ST_BLUENRG2_MODE_SERIAL2)>;
+			};
+
+			
+			/omit-if-no-ref/ swclk_io9: swclk_io9 {
+				pinmux = <ST_BLUENRG2_PINMUX(9, ST_BLUENRG2_MODE_SERIAL1)>;
+			};
+
+			/omit-if-no-ref/ spi_in_io9: spi_in_io9 {
+				pinmux = <ST_BLUENRG2_PINMUX(9, ST_BLUENRG2_MODE_SERIAL0)>;
+			};
+
+			/omit-if-no-ref/ xo16_32m_io9: xo16_32m_io9 {
+				pinmux = <ST_BLUENRG2_PINMUX(9, ST_BLUENRG2_MODE_SERIAL2)>;
+			};
+
+			
+			/omit-if-no-ref/ swdio_io10: swdio_io10 {
+				pinmux = <ST_BLUENRG2_PINMUX(10, ST_BLUENRG2_MODE_SERIAL1)>;
+			};
+
+			/omit-if-no-ref/ spi_out_io10: spi_out_io10 {
+				pinmux = <ST_BLUENRG2_PINMUX(10, ST_BLUENRG2_MODE_SERIAL0)>;
+			};
+
+			/omit-if-no-ref/ clk_32k_io10: clk_32k_io10 {
+				pinmux = <ST_BLUENRG2_PINMUX(10, ST_BLUENRG2_MODE_SERIAL2)>;
+			};
+
+			
+			/omit-if-no-ref/ uart_rxd_io11: uart_rxd_io11 {
+				pinmux = <ST_BLUENRG2_PINMUX(11, ST_BLUENRG2_MODE_SERIAL1)>;
+			};
+
+			/omit-if-no-ref/ spi_cs1_io11: spi_cs1_io11 {
+				pinmux = <ST_BLUENRG2_PINMUX(11, ST_BLUENRG2_MODE_SERIAL0)>;
+			};
+
+			/omit-if-no-ref/ clk_32k_io11: clk_32k_io11 {
+				pinmux = <ST_BLUENRG2_PINMUX(11, ST_BLUENRG2_MODE_SERIAL2)>;
+			};
+
+			
+			/omit-if-no-ref/ i2c1_clk_io12: i2c1_clk_io12 {
+				pinmux = <ST_BLUENRG2_PINMUX(12, ST_BLUENRG2_MODE_SERIAL0)>;
+			};
+
+			
+			/omit-if-no-ref/ uart_cts_io13: uart_cts_io13 {
+				pinmux = <ST_BLUENRG2_PINMUX(13, ST_BLUENRG2_MODE_SERIAL1)>;
+			};
+
+			/omit-if-no-ref/ i2c1_dat_io13: i2c1_dat_io13 {
+				pinmux = <ST_BLUENRG2_PINMUX(13, ST_BLUENRG2_MODE_SERIAL0)>;
+			};
+
+			
+			/omit-if-no-ref/ i2c1_clk_io14: i2c1_clk_io14 {
+				pinmux = <ST_BLUENRG2_PINMUX(14, ST_BLUENRG2_MODE_SERIAL1)>;
+			};
+
+			/omit-if-no-ref/ spi_clk_io14: spi_clk_io14 {
+				pinmux = <ST_BLUENRG2_PINMUX(14, ST_BLUENRG2_MODE_SERIAL0)>;
+			};
+
+			
+			/omit-if-no-ref/ i2c1_dat_io15: i2c1_dat_io15 {
+				pinmux = <ST_BLUENRG2_PINMUX(15, ST_BLUENRG2_MODE_SERIAL1)>;
+			};
+
+			/omit-if-no-ref/ spi_cs1_io15: spi_cs1_io15 {
+				pinmux = <ST_BLUENRG2_PINMUX(15, ST_BLUENRG2_MODE_SERIAL0)>;
+			};
+
+			
+			/omit-if-no-ref/ pwm0_io16: pwm0_io16 {
+				pinmux = <ST_BLUENRG2_PINMUX(16, ST_BLUENRG2_MODE_SERIAL1)>;
+			};
+
+			/omit-if-no-ref/ spi_in_io16: spi_in_io16 {
+				pinmux = <ST_BLUENRG2_PINMUX(16, ST_BLUENRG2_MODE_SERIAL0)>;
+			};
+
+			
+			/omit-if-no-ref/ pwm1_io17: pwm1_io17 {
+				pinmux = <ST_BLUENRG2_PINMUX(17, ST_BLUENRG2_MODE_SERIAL1)>;
+			};
+
+			/omit-if-no-ref/ spi_out_io17: spi_out_io17 {
+				pinmux = <ST_BLUENRG2_PINMUX(17, ST_BLUENRG2_MODE_SERIAL0)>;
+			};
+
+			
+			/omit-if-no-ref/ spi_cs2_io18: spi_cs2_io18 {
+				pinmux = <ST_BLUENRG2_PINMUX(18, ST_BLUENRG2_MODE_SERIAL1)>;
+			};
+
+			/omit-if-no-ref/ uart_rts_io18: uart_rts_io18 {
+				pinmux = <ST_BLUENRG2_PINMUX(18, ST_BLUENRG2_MODE_SERIAL0)>;
+			};
+
+			
+			/omit-if-no-ref/ spi_cs3_io19: spi_cs3_io19 {
+				pinmux = <ST_BLUENRG2_PINMUX(19, ST_BLUENRG2_MODE_SERIAL1)>;
+			};
+
+			/omit-if-no-ref/ uart_cts_io19: uart_cts_io19 {
+				pinmux = <ST_BLUENRG2_PINMUX(19, ST_BLUENRG2_MODE_SERIAL0)>;
+			};
+
+			
+			/omit-if-no-ref/ uart_cts_io20: uart_cts_io20 {
+				pinmux = <ST_BLUENRG2_PINMUX(20, ST_BLUENRG2_MODE_SERIAL1)>;
+			};
+
+			/omit-if-no-ref/ spi_cs2_io20: spi_cs2_io20 {
+				pinmux = <ST_BLUENRG2_PINMUX(20, ST_BLUENRG2_MODE_SERIAL0)>;
+			};
+
+			
+			/omit-if-no-ref/ pwm1_io21: pwm1_io21 {
+				pinmux = <ST_BLUENRG2_PINMUX(21, ST_BLUENRG2_MODE_SERIAL1)>;
+			};
+
+			/omit-if-no-ref/ spi_cs1_io21: spi_cs1_io21 {
+				pinmux = <ST_BLUENRG2_PINMUX(21, ST_BLUENRG2_MODE_SERIAL0)>;
+			};
+
+			
+			/omit-if-no-ref/ pwm0_io22: pwm0_io22 {
+				pinmux = <ST_BLUENRG2_PINMUX(22, ST_BLUENRG2_MODE_SERIAL1)>;
+			};
+
+			/omit-if-no-ref/ spi_cs3_io22: spi_cs3_io22 {
+				pinmux = <ST_BLUENRG2_PINMUX(22, ST_BLUENRG2_MODE_SERIAL0)>;
+			};
+
+			
+			/omit-if-no-ref/ uart_txd_io23: uart_txd_io23 {
+				pinmux = <ST_BLUENRG2_PINMUX(23, ST_BLUENRG2_MODE_SERIAL1)>;
+			};
+
+			/omit-if-no-ref/ spi_out_io23: spi_out_io23 {
+				pinmux = <ST_BLUENRG2_PINMUX(23, ST_BLUENRG2_MODE_SERIAL0)>;
+			};
+
+			/omit-if-no-ref/ pdm_clk_io23: pdm_clk_io23 {
+				pinmux = <ST_BLUENRG2_PINMUX(23, ST_BLUENRG2_MODE_SERIAL2)>;
+			};
+
+			
+			/omit-if-no-ref/ uart_rxd_io24: uart_rxd_io24 {
+				pinmux = <ST_BLUENRG2_PINMUX(24, ST_BLUENRG2_MODE_SERIAL1)>;
+			};
+
+			/omit-if-no-ref/ spi_in_io24: spi_in_io24 {
+				pinmux = <ST_BLUENRG2_PINMUX(24, ST_BLUENRG2_MODE_SERIAL0)>;
+			};
+
+			/omit-if-no-ref/ pdm_data_io24: pdm_data_io24 {
+				pinmux = <ST_BLUENRG2_PINMUX(24, ST_BLUENRG2_MODE_SERIAL2)>;
+			};
+
+			
+			/omit-if-no-ref/ uart_rts_io25: uart_rts_io25 {
+				pinmux = <ST_BLUENRG2_PINMUX(25, ST_BLUENRG2_MODE_SERIAL1)>;
+			};
+
+			/omit-if-no-ref/ spi_clk_io25: spi_clk_io25 {
+				pinmux = <ST_BLUENRG2_PINMUX(25, ST_BLUENRG2_MODE_SERIAL0)>;
+			};
+
+			/omit-if-no-ref/ pdm_clk_io25: pdm_clk_io25 {
+				pinmux = <ST_BLUENRG2_PINMUX(25, ST_BLUENRG2_MODE_SERIAL2)>;
+			};
+
 		};
 	};
 };
